@@ -3,8 +3,10 @@ import "./Navbar.css";
 import logo from "../Assets/Frontend_Assets/logo.png";
 import cart_icon from "../Assets/Frontend_Assets/cart_icon.png";
 import { Link } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 export const Navbar = () => {
+  const { getTotalCartItems } = React.useContext(ShopContext);
   const [menu, setMenu] = React.useState("shop");
   return (
     <div className="navbar">
@@ -63,7 +65,7 @@ export const Navbar = () => {
           <img src={cart_icon} alt="cart-icon" />
         </Link>
 
-        <div className="nav-cart-count">0</div>
+        <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
   );
