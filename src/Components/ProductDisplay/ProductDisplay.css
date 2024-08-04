@@ -21,6 +21,9 @@
 .product-display-img {
   width: 586px;
   height: 700px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
 
 .product-display-right {
@@ -101,4 +104,8 @@
 
 .product-display-right-category span {
   font-weight: 600;
+}
+
+.product-display-main-img {
+  width: 80%;
 }

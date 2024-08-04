@@ -24,3 +24,8 @@
   display: flex;
   gap: 30px;
 }
+
+.popular-items img {
+  width: 300px;
+  height: 300px;
+}
